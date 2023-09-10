@@ -49,8 +49,14 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 '<alias:\w+>' => 'site/<alias>',
-                '<controller:[\w-]+>/<id:\d+>'        => '<controller>/detail',
+                '<controller:[\w-]+>/<id:\d+>' => '<controller>/detail',
             ],
+        ],
+        'productProvider' => [
+            'class' => 'app\components\services\ProductProvider'
+        ],
+        'cacheManager' => [
+            'class' => 'app\components\services\CacheManager'
         ],
     ],
     'params' => $params,
