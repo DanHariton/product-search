@@ -24,6 +24,10 @@ class Yii {
  * 
  */
 class __Application {
+    /**
+     * @var yii\db\Connection
+     */
+    public $dbMsSql;
 }
 
 /**

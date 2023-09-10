@@ -2,13 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '',
+    'dsn' => 'mysql:host=' . $_ENV['LOCAL_DB_HOST'] . ';dbname=' . $_ENV['LOCAL_DB_NAME'],
+    'username' => $_ENV['LOCAL_DB_USER'],
+    'password' => $_ENV['LOCAL_DB_PASSWORD'],
     'charset' => 'utf8',
-
-    // Schema cache options (for production environment)
-    //'enableSchemaCache' => true,
-    //'schemaCacheDuration' => 60,
-    //'schemaCache' => 'cache',
 ];

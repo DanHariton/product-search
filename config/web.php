@@ -1,7 +1,8 @@
 <?php
 
 $params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+$db = require(__DIR__ . '/db.php');
+$dbMsSql = require(__DIR__ . '/mssql_db.php');
 
 $config = [
     'id' => 'basic',
@@ -42,14 +43,15 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        'dbMsSql' => $dbMsSql,
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '<alias:\w+>' => 'site/<alias>',
+                '<controller:[\w-]+>/<id:\d+>'        => '<controller>/detail',
             ],
         ],
-        */
     ],
     'params' => $params,
 ];
