@@ -19,6 +19,7 @@ class ProductController extends Controller
         $response = Yii::$app->response;
         $response->format = Response::FORMAT_JSON;
         $response->data = Yii::$app->productProvider->getProduct($id);
+        Yii::$app->productRequestsLogger->log($id);
 
         return $response;
     }

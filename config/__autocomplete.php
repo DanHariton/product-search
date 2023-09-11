@@ -24,18 +24,14 @@ class Yii {
  * 
  */
 class __Application {
-    /**
-     * @var yii\db\Connection
-     */
-    public $dbMsSql;
-    /**
-     * @var app\components\services\ProductProvider
-     */
-    public $productProvider;
-    /**
-     * @var app\components\services\CacheManager
-     */
-    public $cacheManager;
+
+    public \yii\db\Connection $dbMsSql;
+
+    public \app\components\services\ProductProvider $productProvider;
+
+    public \app\components\services\CacheManager $cacheManager;
+
+    public \app\components\services\ProductRequestsLogger $productRequestsLogger;
 }
 
 /**

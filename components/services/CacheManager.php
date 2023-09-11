@@ -9,11 +9,11 @@ class CacheManager extends Component
 {
     private string $cacheDuration;
 
-    public function __construct()
+    public function __construct(array $config = [])
     {
         $this->cacheDuration = $_ENV['CACHE_DURATION'];
 
-        parent::__construct();
+        parent::__construct($config);
     }
 
     public function addData(string $key, array $data): void

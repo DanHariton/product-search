@@ -18,13 +18,13 @@ class ProductProvider extends Component
     private bool $useLocalDb;
 
     public function __construct(ProductHeliosRepository $productHeliosRepository,
-                                ProductLocalRepository $productLocalRepository)
+                                ProductLocalRepository $productLocalRepository, array $config = [])
     {
         $this->productHeliosRepository = $productHeliosRepository;
         $this->productLocalRepository = $productLocalRepository;
         $this->useLocalDb = $_ENV['USE_LOCAL_DB'];
 
-        parent::__construct();
+        parent::__construct($config);
     }
 
 

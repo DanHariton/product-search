@@ -11,6 +11,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@cntProductRequests' => '@app/files/countProductRequests.txt'
     ],
     'components' => [
         'request' => [
@@ -57,6 +58,9 @@ $config = [
         ],
         'cacheManager' => [
             'class' => 'app\components\services\CacheManager'
+        ],
+        'productRequestsLogger' => [
+            'class' => 'app\components\services\ProductRequestsLogger'
         ],
     ],
     'params' => $params,
